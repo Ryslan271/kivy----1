@@ -1,0 +1,150 @@
+<Container>:
+
+    couple1: text_input_couple1
+    couple2: text_input_couple2
+    couple3: text_input_couple3
+    couple4: text_input_couple4
+    couple5: text_input_couple5
+    couple6: text_input_couple6
+
+    BoxLayout:
+        orientation: "vertical"
+        
+        GridLayout:
+            cols: 3
+            padding: 10
+            spacing: 5
+            size_hint: (1, 1.6)
+
+            TextInput:
+                id: text_input_couple1
+                readonly: True
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input_couple2
+                readonly: True
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+
+            TextInput:
+                id: text_input_couple3
+                readonly: True
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input_couple4
+                readonly: True
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input_couple5
+                readonly: True
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input_couple6
+                readonly: True
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'top'
+
+            BoxLayout:
+                padding: 10
+                spacing: 3
+
+                Button:
+                    text: "Изменить расписание пар"
+                    size_hint: (.4, .3)
+                    on_release: root.changeCouple()
+
+                Button:
+                    text: "Изменить оценки пар"
+                    size_hint: (.4, .3)
+                    on_release: root.changeGrade()
+
+                Button:
+                    text: "Обновить"
+                    size_hint: (.4, .3)
+                    on_release: root.updates()
+
+<Couple>:
+    size_hint: (None, None)
+    size: (480, 680)
+
+    text_in_couple1: text_input1
+    text_in_couple2: text_input2
+    text_in_couple3: text_input3
+    text_in_couple4: text_input4
+    text_in_couple5: text_input5
+    text_in_couple6: text_input6
+
+    BoxLayout:
+        orientation: "vertical"
+        
+        GridLayout:
+            cols: 3
+            padding: 10
+            spacing: 3
+            size_hint: (1, 1.6)
+
+            TextInput:
+                id: text_input1
+                text: "Понедельник\n1-\n2-\n3-\n4-\n5-\n6-"
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input2
+                text: "Вторник\n1-\n2-\n3-\n4-\n5-\n6-"
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+
+            TextInput:
+                id: text_input3
+                text: "Среда\n1-\n2-\n3-\n4-\n5-\n6-"
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input4
+                text: "Четверг\n1-\n2-\n3-\n4-\n5-\n6-"
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input5
+                text: "Пятница\n1-\n2-\n3-\n4-\n5-\n6-"
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+            
+            TextInput:
+                id: text_input6
+                text: "Суббота\n1-\n2-\n3-\n4-\n5-\n6-"
+                font_size: 17
+                background_color: [1, 1, 1, .7]
+
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'top'
+
+            BoxLayout:
+                padding: 10
+                spacing: 3
+
+                Button:
+                    text: "вернуться обратно в меню"
+                    size_hint: (.4, .3)
+                    on_release: root.dismiss()
+
+                Button:
+                    text: "Обновить расписание"
+                    size_hint: (.4, .3)
+                    on_release: root.changeCouples()
